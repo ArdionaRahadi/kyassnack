@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luxury Snacks - Pilihan Makanan Ringan Premium</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      :root {
+        --primary: #d4af37;
+        --secondary: #6b2737;
+        --dark: #121212;
+      }
+
+      body {
+        font-family: "Montserrat", sans-serif;
+        color: #333;
+        overflow-x: hidden;
+      }
+
+      .hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+          url("https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/79c11553-af65-4439-91d7-715a27e4e3e7.png")
+            no-repeat center center/cover;
+        height: 80vh;
+      }
+
+      .product-card {
+        transition: all 0.3s ease;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+      }
+
+      .product-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .testimonial-card {
+        background: white;
+        border-left: 4px solid var(--primary);
+      }
+
+      @media (max-width: 768px) {
+        .hero {
+          height: 60vh;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Header -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+      <div
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <div class="flex items-center space-x-2">
+          <div class="w-10 h-10 bg-amber-600 rounded-full"></div>
+          <h1 class="text-2xl font-bold text-amber-600">
+            ARDIONA<span class="text-gray-800">SNACKS</span>
+          </h1>
+        </div>
+
+        <nav class="hidden md:flex space-x-8" id="main-nav">
+          <a href="#home" class="text-gray-800 hover:text-amber-600 transition"
+            >Beranda</a
+          >
+          <a
+            href="#products"
+            class="text-gray-800 hover:text-amber-600 transition"
+            >Produk</a
+          >
+          <a href="#about" class="text-gray-800 hover:text-amber-600 transition"
+            >Tentang Kami</a
+          >
+          <a
+            href="#location"
+            class="text-gray-800 hover:text-amber-600 transition"
+            >Lokasi</a
+          >
+        </nav>
+
+        <div class="flex items-center space-x-4">
+          <div
+            class="hidden absolute top-20 left-0 w-full bg-white shadow-md py-4 px-6"
+            id="mobile-menu"
+          >
+            <a
+              href="#home"
+              class="block py-2 text-gray-800 hover:text-amber-600 transition"
+              >Beranda</a
+            >
+            <a
+              href="#products"
+              class="block py-2 text-gray-800 hover:text-amber-600 transition"
+              >Produk</a
+            >
+            <a
+              href="#about"
+              class="block py-2 text-gray-800 hover:text-amber-600 transition"
+              >Tentang Kami</a
+            >
+            <a
+              href="#location"
+              class="block py-2 text-gray-800 hover:text-amber-600 transition"
+              >Lokasi</a
+            >
+          </div>
+          <button class="p-2 rounded-full bg-gray-100 text-gray-800">
+            <i class="fas fa-search"></i>
+          </button>
+          <button
+            class="md:hidden p-2 rounded-full bg-gray-100 text-gray-800"
+            id="menu-toggle"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero pt-32 flex items-center relative">
+      <div class="container mx-auto px-4 text-white">
+        <div class="max-w-xl">
+          <h2 class="text-4xl md:text-5xl font-bold mb-4">
+            Kripik Singkong <span class="text-amber-400">Khas Madura</span>
+          </h2>
+          <p class="text-lg mb-8">
+            Rasakan kenikmatan rasa yang tak terlupakan dengan bahan-bahan
+            pilihan terbaik kami.
+          </p>
+          <div class="flex space-x-4">
+            <a href="http://www.google.com" target="_blank">
+              <button
+                class="px-6 py-3 bg-amber-600 text-white rounded-full font-medium hover:bg-amber-700 transition"
+              >
+                Pesan Sekarang
+              </button>
+            </a>
+            <a href="#products">
+              <button
+                class="px-6 py-3 border-2 border-white text-white rounded-full font-medium hover:bg-white hover:text-black transition"
+              >
+                Produk Kami
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section id="products" class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold mb-4">
+            Produk <span class="text-amber-600">Kami</span>
+          </h2>
+          <p class="max-w-2xl mx-auto text-gray-600">
+            Temukan rangkaian makanan ringan premium kami yang dibuat dengan
+            bahan-bahan terbaik dan proses pembuatan yang higienis.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Product 1 -->
+          <div class="product-card bg-white rounded-lg overflow-hidden">
+            <div class="h-64 overflow-hidden">
+              <img
+                src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a5a7a1d8-8f22-463b-a6c9-e828b3fccc0c.png"
+                alt="Keripik kentang truffle dengan kemasan hitam emas mewah"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-3">
+                <h3 class="text-xl font-bold">Truffle Chips</h3>
+              </div>
+              <p class="text-gray-600 mb-4">
+                Keripik kentang dengan sentuhan truffle asli dan garam himalaya.
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="text-xl font-bold text-amber-600">Rp 85.000</span>
+                <button
+                  class="px-4 py-2 bg-gray-100 text-gray-800 rounded-full hover:bg-amber-600 hover:text-white transition"
+                >
+                  + Keranjang
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="product-card bg-white rounded-lg overflow-hidden">
+            <div class="h-64 overflow-hidden">
+              <img
+                src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/883a02b6-5008-4bb1-ba55-a5ffa8f67187.png"
+                alt="Almond karamel premium dengan kemasan kaca elegan"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-3">
+                <h3 class="text-xl font-bold">Caramel Almond</h3>
+              </div>
+              <p class="text-gray-600 mb-4">
+                Almond premium dengan lapisan karamel gourmet yang dibuat secara
+                handmade.
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="text-xl font-bold text-amber-600">Rp 120.000</span>
+                <button
+                  class="px-4 py-2 bg-gray-100 text-gray-800 rounded-full hover:bg-amber-600 hover:text-white transition"
+                >
+                  + Keranjang
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="product-card bg-white rounded-lg overflow-hidden">
+            <div class="h-64 overflow-hidden">
+              <img
+                src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/abcd7386-f9db-492c-930f-ef3527d682db.png"
+                alt="Cookies dark chocolate dengan kepingan emas dapat dimakan"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-3">
+                <h3 class="text-xl font-bold">Gold Luxury Cookie</h3>
+              </div>
+              <p class="text-gray-600 mb-4">
+                Cookies dark chocolate dengan edible gold leaf dan kacang
+                almond.
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="text-xl font-bold text-amber-600">Rp 95.000</span>
+                <button
+                  class="px-4 py-2 bg-gray-100 text-gray-800 rounded-full hover:bg-amber-600 hover:text-white transition"
+                >
+                  + Keranjang
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <!-- <div class="product-card bg-white rounded-lg overflow-hidden">
+            <div class="h-64 overflow-hidden">
+              <img
+                src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/abcd7386-f9db-492c-930f-ef3527d682db.png"
+                alt="Cookies dark chocolate dengan kepingan emas dapat dimakan"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-3">
+                <h3 class="text-xl font-bold">Gold Luxury Cookie</h3>
+                <span
+                  class="px-3 py-1 bg-green-100 text-green-800 text-xs rounded-full"
+                  >Healthy</span
+                >
+              </div>
+              <p class="text-gray-600 mb-4">
+                Cookies dark chocolate dengan edible gold leaf dan kacang
+                almond.
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="text-xl font-bold text-amber-600">Rp 95.000</span>
+                <button
+                  class="px-4 py-2 bg-gray-100 text-gray-800 rounded-full hover:bg-amber-600 hover:text-white transition"
+                >
+                  + Keranjang
+                </button>
+              </div>
+            </div>
+          </div> -->
+        </div>
+
+        <div class="text-center mt-12">
+          <button
+            class="px-8 py-3 border-2 border-amber-600 text-amber-600 rounded-full font-medium hover:bg-amber-600 hover:text-white transition"
+          >
+            Lihat Semua Produk
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col lg:flex-row items-center">
+          <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-12">
+            <img
+              src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/28abbd5b-2ea5-45b3-a4e4-8c32cc24524a.png"
+              alt="Proses pembuatan makanan ringan premium di dapur modern profesional"
+              class="rounded-lg shadow-xl"
+            />
+          </div>
+          <div class="lg:w-1/2">
+            <h2 class="text-3xl font-bold mb-6">
+              Tentang <span class="text-amber-600">KRIPIK SINGKONG BABY</span>
+            </h2>
+            <p class="text-gray-600 mb-6">
+              LUXURYSNACKS didirikan pada tahun 2018 dengan misi memberikan
+              pengalaman menyantap makanan ringan yang berbeda. Kami percaya
+              bahwa camilan pun pantas mendapatkan sentuhan premium.
+            </p>
+            <p class="text-gray-600 mb-8">
+              Setiap produk kami dibuat dengan bahan-bahan terpilih melalui
+              proses yang ketat untuk menjamin kualitas dan rasa konsisten. Dari
+              pemilihan bahan mentah hingga pengemasan akhir, kami tidak
+              berkompromi dengan kualitas.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <div class="flex items-center space-x-2">
+                <div
+                  class="w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center"
+                >
+                  <i class="fas fa-medal text-amber-600"></i>
+                </div>
+                <span>Bahan Premium</span>
+              </div>
+              <div class="flex items-center space-x-2">
+                <div
+                  class="w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center"
+                >
+                  <i class="fas fa-leaf text-amber-600"></i>
+                </div>
+                <span>Tanpa Pengawet</span>
+              </div>
+              <div class="flex items-center space-x-2">
+                <div
+                  class="w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center"
+                >
+                  <i class="fas fa-star text-amber-600"></i>
+                </div>
+                <span>Kualitas Tertinggi</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <!-- <section class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold mb-4">
+            Kata <span class="text-amber-600">Pelanggan</span>
+          </h2>
+          <p class="max-w-2xl mx-auto text-gray-600">
+            Apa kata mereka yang telah mencicipi produk premium kami.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="testimonial-card p-6 rounded-lg shadow-md">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-full overflow-hidden bg-gray-200">
+                <img
+                  src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4e6009f9-3885-459e-bb8d-e2781027cdd0.png"
+                  alt="Potret wanita profesional mengenakan kacamata"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="ml-4">
+                <h4 class="font-bold">Diana Putri</h4>
+                <div class="text-amber-400">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-600">
+              "Caramel Almond-nya luar biasa! Teksturnya sempurna - renyah di
+              luar tapi lembut di dalam. Kemasannya juga sangat elegan, cocok
+              untuk hadiah."
+            </p>
+          </div>
+
+          <div class="testimonial-card p-6 rounded-lg shadow-md">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-full overflow-hidden bg-gray-200">
+                <img
+                  src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8b490782-2cb8-4d66-8bbb-a2b576adcdd2.png"
+                  alt="Potret pria dewasa dengan senyum ramah"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="ml-4">
+                <h4 class="font-bold">Budi Santoso</h4>
+                <div class="text-amber-400">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-600">
+              "Truffle Chips favorit saya! Rasa trufflenya terasa sekali tetapi
+              tidak terlalu kuat. Anak-anak saya juga suka walau harganya
+              premium."
+            </p>
+          </div>
+
+          <div class="testimonial-card p-6 rounded-lg shadow-md">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-full overflow-hidden bg-gray-200">
+                <img
+                  src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9f5e9755-1068-4556-9c9d-b96e1ed7fb0d.png"
+                  alt="Potret wanita muda tersenyum dengan latar belakang kota"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="ml-4">
+                <h4 class="font-bold">Rina Wijaya</h4>
+                <div class="text-amber-400">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-600">
+              "Gold Luxury Cookie sangat Instagrammable! Rasanya juga enak
+              dengan sentuhan gold leaf yang unik. Paket sampai cepat dan dalam
+              kondisi baik."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Location Section -->
+    <section id="location" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col lg:flex-row">
+          <div class="lg:w-1/2 lg:pr-12 mb-10 lg:mb-0">
+            <h2 class="text-3xl font-bold mb-6">
+              Temukan <span class="text-amber-600">Kami</span>
+            </h2>
+            <p class="text-gray-600 mb-6">
+              Kunjungi outlet kami untuk merasakan langsung semua varian produk
+              premium kami. Kami juga tersedia di berbagai marketplace ternama.
+            </p>
+
+            <div class="mb-8">
+              <h3 class="text-xl font-bold mb-4">Outlet Kami</h3>
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <div
+                    class="w-8 h-8 bg-amber-100 rounded-full flex items-center justify-center mr-4 mt-1"
+                  >
+                    <i class="fas fa-map-marker-alt text-amber-600"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium">LUXURYSNACKS Grand Indonesia</h4>
+                    <p class="text-gray-600">
+                      Level 3, Grand Indonesia, Jakarta Pusat
+                    </p>
+                    <p class="text-gray-600">Setiap hari 10.00 - 21.00 WIB</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="w-8 h-8 bg-amber-100 rounded-full flex items-center justify-center mr-4 mt-1"
+                  >
+                    <i class="fas fa-map-marker-alt text-amber-600"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium">LUXURYSNACKS Pondok Indah Mall</h4>
+                    <p class="text-gray-600">
+                      Level 2, Pondok Indah Mall 2, Jakarta Selatan
+                    </p>
+                    <p class="text-gray-600">Setiap hari 10.00 - 22.00 WIB</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold mb-4">Online Store</h3>
+              <div class="flex space-x-4">
+                <button class="p-3 bg-gray-200 rounded-lg">
+                  <i class="fab fa-shopify text-gray-700"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:w-1/2">
+            <div class="h-96 rounded-xl overflow-hidden shadow-xl">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d106.82256141531347!3d-6.194742662246247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f42d35739193%3A0xac72d8911c5c92b8!2sGrand%20Indonesia!5e0!3m2!1sen!2sid!4v1625827646723!5m2!1sen!2sid"
+                width="100%"
+                height="100%"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              >
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <!-- <section class="py-16 bg-amber-600 text-white">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-4">Dapatkan Promo Menarik</h2>
+        <p class="max-w-2xl mx-auto mb-8">
+          Berlangganan newsletter kami untuk mendapatkan informasi produk
+          terbaru dan penawaran spesial.
+        </p>
+
+        <div class="max-w-md mx-auto flex">
+          <input
+            type="email"
+            placeholder="Alamat email Anda"
+            class="flex-grow px-4 py-3 rounded-l-lg focus:outline-none text-gray-900"
+          />
+          <button
+            class="px-6 py-3 bg-gray-900 text-white rounded-r-lg font-medium hover:bg-gray-800 transition"
+          >
+            Subscribe
+          </button>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <div class="flex items-center space-x-2 mb-4">
+              <div class="w-10 h-10 bg-amber-600 rounded-full"></div>
+              <h3 class="text-xl font-bold text-white">
+                LUXURY<span>SNACKS</span>
+              </h3>
+            </div>
+            <p class="mb-4">
+              Makanan ringan premium dengan kualitas terbaik dan rasa yang tak
+              terlupakan.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-amber-600 transition"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="#"
+                class="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-amber-600 transition"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="#"
+                class="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-amber-600 transition"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-bold text-white mb-4">Produk</h4>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="hover:text-amber-400 transition"
+                  >Semua Produk</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-amber-400 transition"
+                  >Best Seller</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-amber-400 transition"
+                  >Produk Baru</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-amber-400 transition">Bundle</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-bold text-white mb-4">Perusahaan</h4>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="hover:text-amber-400 transition"
+                  >Tentang Kami</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-amber-400 transition">Blog</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-amber-400 transition">Karir</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-amber-400 transition"
+                  >Hubungi Kami</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-bold text-white mb-4">Bantuan</h4>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="hover:text-amber-400 transition">FAQ</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-amber-400 transition"
+                  >Pengiriman</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-amber-400 transition"
+                  >Pembayaran</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-amber-400 transition"
+                  >Kebijakan Privasi</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p>© 2025 ARDIONASNACKS. All rights reserved.</p>
+          <div class="flex space-x-6 mt-4 md:mt-0">
+            <img
+              src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4f004366-d335-4a68-b4c2-9df060f3d5ac.png"
+              alt="Logo pembayaran Visa"
+              class="h-8"
+            />
+            <img
+              src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/928da6f5-c4e3-47cf-b119-0480c6a5b4e5.png"
+              alt="Logo pembayaran Mastercard"
+              class="h-8"
+            />
+            <img
+              src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/01890c39-d6cd-44c0-8845-fe6694e44494.png"
+              alt="Logo pembayaran BCA"
+              class="h-8"
+            />
+            <img
+              src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/75d319b0-10cc-41de-804b-a35d183116d0.png"
+              alt="Logo pembayaran Mandiri"
+              class="h-8"
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

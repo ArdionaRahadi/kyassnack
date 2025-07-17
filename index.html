@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delizio - Premium Food Experience</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-50 scroll-smooth">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-effect">
+      <div class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <div class="text-2xl font-bold text-white">
+            <span
+              class="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent"
+              >Delizio</span
+            >
+          </div>
+          <div class="hidden md:flex space-x-8">
+            <a
+              href="#home"
+              class="text-white hover:text-orange-400 transition-colors font-medium"
+              >Beranda</a
+            >
+            <a
+              href="#products"
+              class="text-white hover:text-orange-400 transition-colors font-medium"
+              >Produk</a
+            >
+            <a
+              href="#about"
+              class="text-white hover:text-orange-400 transition-colors font-medium"
+              >Tentang</a
+            >
+            <a
+              href="#contact"
+              class="text-white hover:text-orange-400 transition-colors font-medium"
+              >Kontak</a
+            >
+          </div>
+          <button id="hamburger" class="md:hidden text-white">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div
+          id="mobileMenu"
+          class="md:hidden hidden mt-4 pb-4 bg-black bg-opacity-90 backdrop-blur-md rounded-lg px-4 py-2 border border-white border-opacity-20"
+        >
+          <div class="flex flex-col space-y-4">
+            <a
+              href="#home"
+              class="text-white hover:text-orange-400 transition-colors font-medium"
+              >Beranda</a
+            >
+            <a
+              href="#products"
+              class="text-white hover:text-orange-400 transition-colors font-medium"
+              >Produk</a
+            >
+            <a
+              href="#about"
+              class="text-white hover:text-orange-400 transition-colors font-medium"
+              >Tentang</a
+            >
+            <a
+              href="#contact"
+              class="text-white hover:text-orange-400 transition-colors font-medium"
+              >Kontak</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="min-h-screen hero-gradient flex items-center justify-center relative overflow-hidden"
+    >
+      <div class="absolute inset-0 bg-black opacity-20"></div>
+
+      <!-- Floating Elements -->
+      <div
+        class="absolute top-20 left-10 w-20 h-20 bg-white bg-opacity-20 rounded-full animate-float"
+      ></div>
+      <div
+        class="absolute top-40 right-20 w-16 h-16 bg-orange-400 bg-opacity-30 rounded-full animate-float"
+        style="animation-delay: 1s"
+      ></div>
+      <div
+        class="absolute bottom-20 left-20 w-24 h-24 bg-red-400 bg-opacity-25 rounded-full animate-float"
+        style="animation-delay: 2s"
+      ></div>
+
+      <div class="container mx-auto px-6 text-center relative z-10">
+        <div class="animate-fadeInUp">
+          <h1 class="text-5xl md:text-7xl font-bold text-white mb-6">
+            Citarasa Singkong <span class="text-orange-400">Terbaik</span>
+          </h1>
+          <p class="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto">
+            Nikmati kripik singkong terbaik dengan produk makanan berkualitas
+            yang dibuat dengan cinta dan keahlian
+          </p>
+          <button
+            onclick="scrollToProducts()"
+            class="bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:from-orange-600 hover:to-red-600 transform hover:scale-105 transition-all duration-300 animate-glow"
+          >
+            Jelajahi Produk
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section id="products" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+            Produk <span class="text-orange-500">Kami</span>
+          </h2>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            Koleksi terpilih dari produk makanan terbaik kami yang telah
+            dipercaya ribuan pelanggan
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Product 1 -->
+          <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="img/baby bawang.jpg"
+                alt="Kripik Singkong
+              Original"
+                class="product-image"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-gray-800 mb-2">
+                Kripik Singkong Cap Baby Rasa Bawang
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Kripik singkong renyah dengan bumbu tradisional yang gurih dan
+                nikmat
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-2xl font-bold text-orange-500">Rp 4.000</span>
+                <button
+                  class="bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-2 rounded-full hover:from-orange-600 hover:to-red-600 transition-all duration-300"
+                >
+                  Pesan Sekarang
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="img/baby pedas.jpg"
+                alt="Kripik Singkong
+              Original"
+                class="product-image"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-gray-800 mb-2">
+                Kripik Singkong Cap Baby Rasa Pedas Manis
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Kripik singkong renyah dengan bumbu tradisional yang gurih dan
+                nikmat
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-2xl font-bold text-orange-500">Rp 4.000</span>
+                <button
+                  class="bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-2 rounded-full hover:from-orange-600 hover:to-red-600 transition-all duration-300"
+                >
+                  Pesan Sekarang
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <!-- <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden"
+            onclick="showProductDetail('Soto Ayam Lamongan')"
+          >
+            <div
+              class="h-64 bg-gradient-to-br from-yellow-400 to-orange-500 relative"
+            >
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-6xl">🍜</div>
+              </div>
+              <div
+                class="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold"
+              >
+                Popular
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-gray-800 mb-2">
+                Soto Ayam Lamongan
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Soto ayam khas Lamongan dengan kuah bening yang segar dan ayam
+                yang empuk
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-2xl font-bold text-orange-500"
+                  >Rp 25.000</span
+                >
+                <button
+                  class="bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-2 rounded-full hover:from-orange-600 hover:to-red-600 transition-all duration-300"
+                >
+                  Pesan Sekarang
+                </button>
+              </div>
+            </div>
+          </div> -->
+
+          <!-- Product 4 -->
+          <!-- <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden"
+            onclick="showProductDetail('Bakso Malang Super')"
+          >
+            <div
+              class="h-64 bg-gradient-to-br from-green-400 to-blue-500 relative"
+            >
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-6xl">🍲</div>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-gray-800 mb-2">
+                Bakso Malang Super
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Bakso jumbo dengan isian telur puyuh dan kuah kaldu yang gurih
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-2xl font-bold text-orange-500"
+                  >Rp 30.000</span
+                >
+                <button
+                  class="bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-2 rounded-full hover:from-orange-600 hover:to-red-600 transition-all duration-300"
+                >
+                  Pesan Sekarang
+                </button>
+              </div>
+            </div>
+          </div> -->
+
+          <!-- Product 5 -->
+          <!-- <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden"
+            onclick="showProductDetail('Gado-Gado Jakarta')"
+          >
+            <div
+              class="h-64 bg-gradient-to-br from-purple-400 to-pink-500 relative"
+            >
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-6xl">🥗</div>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-gray-800 mb-2">
+                Gado-Gado Jakarta
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Salad tradisional dengan sayuran segar dan bumbu kacang yang
+                lezat
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-2xl font-bold text-orange-500"
+                  >Rp 20.000</span
+                >
+                <button
+                  class="bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-2 rounded-full hover:from-orange-600 hover:to-red-600 transition-all duration-300"
+                >
+                  Pesan Sekarang
+                </button>
+              </div>
+            </div>
+          </div> -->
+
+          <!-- Product 6 -->
+          <!-- <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden"
+            onclick="showProductDetail('Nasi Liwet Sunda')"
+          >
+            <div
+              class="h-64 bg-gradient-to-br from-teal-400 to-green-500 relative"
+            >
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-6xl">🍚</div>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-gray-800 mb-2">
+                Nasi Liwet Sunda
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Nasi liwet dengan lauk pauk lengkap dan cita rasa Sunda yang
+                autentik
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-2xl font-bold text-orange-500"
+                  >Rp 35.000</span
+                >
+                <button
+                  class="bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-2 rounded-full hover:from-orange-600 hover:to-red-600 transition-all duration-300"
+                >
+                  Pesan Sekarang
+                </button>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-900 text-white">
+      <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">
+              Mengapa Memilih <span class="text-orange-400">Delizio?</span>
+            </h2>
+            <p class="text-xl text-gray-300 mb-8">
+              Kami berkomitmen untuk memberikan pengalaman kuliner terbaik
+              dengan menggunakan bahan-bahan berkualitas tinggi dan resep
+              tradisional yang telah teruji waktu.
+            </p>
+            <div class="space-y-6">
+              <div class="flex items-center space-x-4">
+                <div
+                  class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center"
+                >
+                  <span class="text-2xl">✨</span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold">Kualitas Premium</h3>
+                  <p class="text-gray-400">
+                    Bahan-bahan pilihan dan proses pengolahan yang higienis
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-center space-x-4">
+                <div
+                  class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center"
+                >
+                  <span class="text-2xl">🚀</span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold">Pengiriman Cepat</h3>
+                  <p class="text-gray-400">Diantar langsung ke rumah Anda</p>
+                </div>
+              </div>
+              <div class="flex items-center space-x-4">
+                <div
+                  class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center"
+                >
+                  <span class="text-2xl">💝</span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold">Kepuasan Terjamin</h3>
+                  <p class="text-gray-400">
+                    Garansi uang kembali jika tidak puas dengan produk kami
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative">
+            <!-- <div
+              class="w-full h-96 bg-gradient-to-br from-orange-400 to-red-500 rounded-3xl flex items-center justify-center"
+            ></div> -->
+            <div class="h-96 rounded-xl overflow-hidden shadow-xl">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d349.75278579144685!2d112.67434527491908!3d-7.353774848794437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7e32dc9b37073%3A0x695f5fe28d85ec9a!2sGriya%20Taman%20Asri%20-%20Lavenda%20Cluster!5e0!3m2!1sid!2sid!4v1752730260177!5m2!1sid!2sid"
+                width="100%"
+                height="100%"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+            Hubungi <span class="text-orange-500">Kami</span>
+          </h2>
+          <p class="text-xl text-gray-600">
+            Siap melayani Anda dengan sepenuh hati
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="text-center p-8 bg-gray-50 rounded-2xl">
+            <div
+              class="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <span class="text-2xl text-white">📱</span>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">WhatsApp</h3>
+            <p class="text-gray-600">+62 851-0555-8222</p>
+          </div>
+
+          <div class="text-center p-8 bg-gray-50 rounded-2xl">
+            <div
+              class="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <span class="text-2xl text-white">📧</span>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">Email</h3>
+            <p class="text-gray-600">ardionarahadi@gmail.com</p>
+          </div>
+
+          <div class="text-center p-8 bg-gray-50 rounded-2xl">
+            <div
+              class="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <span class="text-2xl text-white">📍</span>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">Lokasi</h3>
+            <p class="text-gray-600">
+              Griya Asri Taman Asri, Cluster Lavenda, Blok BD 08, Kec. Taman,
+              Kabupaten Sidoarjo, Jawa Timur 61257
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="container mx-auto px-6">
+        <div class="text-center">
+          <div class="text-3xl font-bold mb-4">
+            <span
+              class="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent"
+              >KYASSNACK</span
+            >
+          </div>
+          <p class="text-gray-400 mb-6">
+            Menghadirkan cita rasa terbaik untuk keluarga Indonesia
+          </p>
+
+          <div class="mt-8 pt-8 border-t border-gray-800 text-gray-500">
+            <p>&copy; 2025 KYASSNACK. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modal for Product Details -->
+    <div
+      id="productModal"
+      class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center"
+    >
+      <div class="bg-white rounded-2xl p-8 max-w-md mx-4">
+        <div class="text-center">
+          <h3
+            id="modalTitle"
+            class="text-2xl font-bold text-gray-800 mb-4"
+          ></h3>
+          <p class="text-gray-600 mb-6">
+            Produk telah ditambahkan ke keranjang! Silakan lanjutkan untuk
+            checkout atau terus berbelanja.
+          </p>
+          <div class="flex space-x-4">
+            <button
+              onclick="closeModal()"
+              class="flex-1 bg-gray-200 text-gray-800 px-6 py-3 rounded-full hover:bg-gray-300 transition-colors"
+            >
+              Tutup
+            </button>
+            <button
+              onclick="checkout()"
+              class="flex-1 bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-3 rounded-full hover:from-orange-600 hover:to-red-600 transition-all duration-300"
+            >
+              Checkout
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
