@@ -47,10 +47,22 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 // Add scroll effect to navbar
 window.addEventListener("scroll", function () {
   const navbar = document.querySelector("nav");
-  const mobileMenuText = document.querySelectorAll("mobile-menu-text");
+  const mobileMenuText = document.querySelectorAll(".mobile-menu-text");
   if (window.scrollY > 100) {
     navbar.classList.add("nav-scrolled");
+    for (let i = 0; i < mobileMenuText.length; i++) {
+      mobileMenuText[i].classList.add("text-white");
+    }
+    for (let i = 0; i < mobileMenuText.length; i++) {
+      mobileMenuText[i].classList.remove("black-text");
+    }
   } else {
     navbar.classList.remove("nav-scrolled");
+    for (let i = 0; i < mobileMenuText.length; i++) {
+      mobileMenuText[i].classList.add("black-text");
+    }
+    for (let i = 0; i < mobileMenuText.length; i++) {
+      mobileMenuText[i].classList.remove("text-white");
+    }
   }
 });
