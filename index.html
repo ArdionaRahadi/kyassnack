@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KYASSNACK</title>
+    <link rel="icon" type="image/png" href="img/logo.png" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body class="bg-gray-50 scroll-smooth">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-effect">
+      <div class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <div class="text-2xl font-bold text-white">
+            <span
+              class="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent"
+              >KYASSNACK</span
+            >
+          </div>
+          <div class="hidden md:flex space-x-8">
+            <a
+              href="#home"
+              class="text-white hover:text-orange-400 transition-colors font-medium"
+              >Beranda</a
+            >
+            <a
+              href="#products"
+              class="text-white hover:text-orange-400 transition-colors font-medium"
+              >Produk</a
+            >
+            <a
+              href="#about"
+              class="text-white hover:text-orange-400 transition-colors font-medium"
+              >Tentang</a
+            >
+            <a
+              href="#contact"
+              class="text-white hover:text-orange-400 transition-colors font-medium"
+              >Kontak</a
+            >
+          </div>
+          <button id="hamburger" class="md:hidden text-white">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div
+          id="mobileMenu"
+          class="md:hidden glass-effect hidden mt-4 pb-4 rounded-lg px-4 py-2"
+        >
+          <div class="flex flex-col space-y-4">
+            <a
+              href="#home"
+              class="black-text mobile-menu-text hover:text-orange-400 transition-colors font-medium"
+              >Beranda</a
+            >
+            <a
+              href="#products"
+              class="black-text mobile-menu-text hover:text-orange-400 transition-colors font-medium"
+              >Produk</a
+            >
+            <a
+              href="#about"
+              class="black-text mobile-menu-text hover:text-orange-400 transition-colors font-medium"
+              >Tentang</a
+            >
+            <a
+              href="#contact"
+              class="black-text mobile-menu-text hover:text-orange-400 transition-colors font-medium"
+              >Kontak</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="min-h-screen hero-gradient flex items-center justify-center relative overflow-hidden"
+    >
+      <div class="absolute inset-0 bg-black opacity-20"></div>
+
+      <!-- Floating Elements -->
+      <div
+        class="absolute top-20 left-10 w-20 h-20 bg-white bg-opacity-20 rounded-full animate-float"
+      ></div>
+      <div
+        class="absolute top-40 right-20 w-16 h-16 bg-orange-400 bg-opacity-30 rounded-full animate-float"
+        style="animation-delay: 1s"
+      ></div>
+      <div
+        class="absolute bottom-20 left-20 w-24 h-24 bg-red-400 bg-opacity-25 rounded-full animate-float"
+        style="animation-delay: 2s"
+      ></div>
+
+      <div class="container mx-auto px-6 text-center relative z-10">
+        <div class="animate-fadeInUp">
+          <h1 class="text-5xl md:text-7xl font-bold text-white mb-6">
+            Citarasa Singkong <span class="text-orange-400">Terbaik</span>
+          </h1>
+          <p class="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto">
+            Nikmati keripik singkong terbaik dengan produk makanan berkualitas
+            yang dibuat dengan cinta dan keahlian
+          </p>
+          <button
+            onclick="scrollToProducts()"
+            class="bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:from-orange-600 hover:to-red-600 transform hover:scale-105 transition-all duration-300 animate-glow cursor-pointer"
+          >
+            Jelajahi Produk
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section id="products" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+            Produk <span class="text-orange-500">Kami</span>
+          </h2>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            Koleksi terpilih dari produk makanan terbaik kami yang telah
+            dipercaya ribuan pelanggan
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mx-auto">
+          <!-- Product 1 -->
+          <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="img/Keripik SIngkong Bawang.png"
+                alt="Keripik Singkong
+              Original"
+                class="product-image"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-gray-800 mb-2">
+                Keripik Singkong Cap Baby Rasa Bawang
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Keripik singkong renyah dengan bumbu tradisional yang gurih dan
+                nikmat
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-2xl font-bold text-orange-500">Rp 4.500</span>
+                <a
+                  target="_blank"
+                  href="https://shopee.co.id/Keripik-Singkong-Cap-Baby-100-Gram-i.643139112.40563947947"
+                  ><button
+                    class="bg-gradient-to-r from-orange-500 to-red-500 text-white px-3 py-4 rounded-full hover:from-orange-600 hover:to-red-600 transition-all duration-300 cursor-pointer"
+                  >
+                    Pesan Sekarang
+                  </button></a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="img/Keripik SIngkong Pedas.png"
+                alt="Keripik Singkong
+              Original"
+                class="product-image"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-gray-800 mb-2">
+                Keripik Singkong Cap Baby Rasa Pedas Manis
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Keripik singkong renyah dengan bumbu tradisional yang gurih dan
+                nikmat
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-2xl font-bold text-orange-500">Rp 4.500</span>
+                <a
+                  target="_blank"
+                  href="https://shopee.co.id/Keripik-Singkong-Cap-Baby-100-Gram-i.643139112.40563947947"
+                  ><button
+                    class="bg-gradient-to-r from-orange-500 to-red-500 text-white px-3 py-4 rounded-full hover:from-orange-600 hover:to-red-600 transition-all duration-300 cursor-pointer"
+                  >
+                    Pesan Sekarang
+                  </button></a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="img/Keripik SIngkong Bawang.png"
+                alt="Kripik Singkong
+              Original"
+                class="product-image"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-gray-800 mb-2">
+                Keripik Singkong Cap Baby Rasa Bawang
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Keripik singkong renyah dengan bumbu tradisional yang gurih dan
+                nikmat
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-2xl font-bold text-orange-500">Rp 4.500</span>
+                <a
+                  target="_blank"
+                  href="https://shopee.co.id/Keripik-Singkong-Cap-Baby-100-Gram-i.643139112.40563947947"
+                  ><button
+                    class="bg-gradient-to-r from-orange-500 to-red-500 text-white px-3 py-4 rounded-full hover:from-orange-600 hover:to-red-600 transition-all duration-300 cursor-pointer"
+                  >
+                    Pesan Sekarang
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="img/Keripik SIngkong Pedas.png"
+                alt="Kripik Singkong
+              Original"
+                class="product-image"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-gray-800 mb-2">
+                Keripik Singkong Cap Baby Rasa Pedas Manis
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Keripik singkong renyah dengan bumbu tradisional yang gurih dan
+                nikmat
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-2xl font-bold text-orange-500">Rp 4.500</span>
+                <a
+                  target="_blank"
+                  href="https://shopee.co.id/Keripik-Singkong-Cap-Baby-100-Gram-i.643139112.40563947947"
+                  ><button
+                    class="bg-gradient-to-r from-orange-500 to-red-500 text-white px-3 py-4 rounded-full hover:from-orange-600 hover:to-red-600 transition-all duration-300 cursor-pointer"
+                  >
+                    Pesan Sekarang
+                  </button></a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 5 -->
+
+          <!-- Product 6 -->
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-900 text-white">
+      <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">
+              Mengapa Memilih <span class="text-orange-400">KYASSNACK?</span>
+            </h2>
+            <p class="text-xl text-gray-300 mb-8">
+              Kami berkomitmen untuk memberikan pengalaman Jajanan Singkong
+              terbaik dengan menggunakan bahan-bahan berkualitas tinggi dan
+              resep tradisional yang telah teruji waktu.
+            </p>
+            <div class="space-y-6">
+              <div class="flex items-center space-x-4">
+                <div
+                  class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center"
+                >
+                  <span class="text-2xl">✨</span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold">Kualitas Premium</h3>
+                  <p class="text-gray-400"></p>
+                </div>
+              </div>
+              <div class="flex items-center space-x-4">
+                <div
+                  class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center"
+                >
+                  <span class="text-2xl">🚀</span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold">Pengiriman Cepat</h3>
+                  <p class="text-gray-400"></p>
+                </div>
+              </div>
+              <div class="flex items-center space-x-4">
+                <div
+                  class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center"
+                >
+                  <span class="text-2xl">💝</span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold">Kepuasan Terjamin</h3>
+                  <p class="text-gray-400"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-5 mt-8">
+              Lokasi
+              <span class="text-orange-400">Kami</span>
+            </h2>
+            <p class="text-xl text-center text-gray-300 mb-6">
+              Griya Asri Taman Asri, Cluster Lavenda, Blok BD 08, Kec. Taman,
+              Kabupaten Sidoarjo, Jawa Timur 61257
+            </p>
+            <div class="h-96 rounded-xl overflow-hidden shadow-xl">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d349.75278579144685!2d112.67434527491908!3d-7.353774848794437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7e32dc9b37073%3A0x695f5fe28d85ec9a!2sGriya%20Taman%20Asri%20-%20Lavenda%20Cluster!5e0!3m2!1sid!2sid!4v1752730260177!5m2!1sid!2sid"
+                width="100%"
+                height="100%"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+            Hubungi <span class="text-orange-500">Kami</span>
+          </h2>
+          <p class="text-xl text-gray-600">
+            Siap melayani Anda dengan sepenuh hati
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <a target="_blank" href="https://wa.me/6281335789325"
+            ><div class="text-center p-8 bg-gray-50 rounded-2xl">
+              <div
+                class="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <span class="text-2xl text-white">📱</span>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-800 mb-2">WhatsApp</h3>
+              <p class="text-gray-600">+62 813-3578-9325</p>
+            </div></a
+          >
+
+          <a target="_blank" href="mailto:kyassnack@gmail.com"
+            ><div class="text-center p-8 bg-gray-50 rounded-2xl">
+              <div
+                class="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <span class="text-2xl text-white">📧</span>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-800 mb-2">Email</h3>
+              <p class="text-gray-600">kyassnack@gmail.com</p>
+            </div></a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- <footer class="bg-gray-900 text-white py-12">
+      <div class="container mx-auto px-6">
+        <div class="text-center">
+          <div class="text-3xl font-bold mb-4">
+            <span
+              class="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent"
+              >KYASSNACK</span
+            >
+          </div>
+          <p class="text-gray-400 mb-6">
+            Menghadirkan cita rasa terbaik untuk keluarga Indonesia
+          </p>
+
+          <div class="mt-8 pt-8 border-t border-gray-800 text-gray-500">
+            <p>&copy; 2025 KYASSNACK. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer> -->
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <div class="flex items-center space-x-2 mb-4">
+              <div class="w-10 h-10 bg-amber-600 rounded-full"></div>
+              <h3 class="text-xl font-bold text-white">
+                KYAS<span>SNACKS</span>
+              </h3>
+            </div>
+            <p class="mb-4">
+              Makanan ringan premium dengan kualitas terbaik dan rasa yang tak
+              terlupakan.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-amber-600 transition"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="#"
+                class="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-amber-600 transition"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="#"
+                class="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-amber-600 transition"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-bold text-white mb-4">Produk</h4>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="hover:text-amber-400 transition"
+                  >Semua Produk</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-amber-400 transition"
+                  >Best Seller</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-amber-400 transition"
+                  >Produk Baru</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-amber-400 transition">Bundle</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-bold text-white mb-4">Perusahaan</h4>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="hover:text-amber-400 transition"
+                  >Tentang Kami</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-amber-400 transition">Blog</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-amber-400 transition">Karir</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-amber-400 transition"
+                  >Hubungi Kami</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-bold text-white mb-4">Bantuan</h4>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="hover:text-amber-400 transition">FAQ</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-amber-400 transition"
+                  >Pengiriman</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-amber-400 transition"
+                  >Pembayaran</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-amber-400 transition"
+                  >Kebijakan Privasi</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p>© 2025 KYASSNACK. All rights reserved.</p>
+          <div class="flex space-x-6 mt-4 md:mt-0">
+            <img
+              src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4f004366-d335-4a68-b4c2-9df060f3d5ac.png"
+              alt="Logo pembayaran Visa"
+              class="h-8"
+            />
+            <img
+              src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/928da6f5-c4e3-47cf-b119-0480c6a5b4e5.png"
+              alt="Logo pembayaran Mastercard"
+              class="h-8"
+            />
+            <img
+              src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/01890c39-d6cd-44c0-8845-fe6694e44494.png"
+              alt="Logo pembayaran BCA"
+              class="h-8"
+            />
+            <img
+              src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/75d319b0-10cc-41de-804b-a35d183116d0.png"
+              alt="Logo pembayaran Mandiri"
+              class="h-8"
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modal for Product Details -->
+    <div
+      id="productModal"
+      class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center"
+    >
+      <div class="bg-white rounded-2xl p-8 max-w-md mx-4">
+        <div class="text-center">
+          <h3
+            id="modalTitle"
+            class="text-2xl font-bold text-gray-800 mb-4"
+          ></h3>
+          <p class="text-gray-600 mb-6">
+            Produk telah ditambahkan ke keranjang! Silakan lanjutkan untuk
+            checkout atau terus berbelanja.
+          </p>
+          <div class="flex space-x-4">
+            <button
+              onclick="closeModal()"
+              class="flex-1 bg-gray-200 text-gray-800 px-6 py-3 rounded-full hover:bg-gray-300 transition-colors"
+            >
+              Tutup
+            </button>
+            <button
+              onclick="checkout()"
+              class="flex-1 bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-3 rounded-full hover:from-orange-600 hover:to-red-600 transition-all duration-300"
+            >
+              Checkout
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
